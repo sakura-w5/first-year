@@ -1,0 +1,6 @@
+{
+  "name": "One Year Anniversary",
+  "description": "A romantic, mobile-friendly anniversary web page template with timeline and photos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

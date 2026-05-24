@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Serif SC", serif;
+  --font-display: "Ma Shan Zheng", cursive;
+
+  /* Refined, cohesive pastel colors */
+  --color-pastel-beige: #FCF9F2;
+  --color-pastel-pink: #FDF2F5;
+  --color-pastel-rose: #F4DCD6;
+  --color-pastel-purple: #F8F5FB;
+  --color-pastel-blue: #F0F6F7;
+  --color-pastel-mint: #F0F7F4;
+  
+  --color-text-primary: #4A4042;
+  --color-text-secondary: #887B7E;
+}
+
+body {
+  background-color: var(--color-pastel-beige);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
