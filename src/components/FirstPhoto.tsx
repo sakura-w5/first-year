@@ -17,7 +17,7 @@ export const FirstPhoto: React.FC = () => {
         className="z-10 w-full max-w-[320px] sm:max-w-sm shrink-0"
       >
         <div className="text-center mb-10">
-          <h2 className="text-[2.25rem] font-display text-text-primary mb-3 drop-shadow-sm">
+          <h2 className="text-[1.5rem] sm:text-[1.75rem] font-display text-text-primary mb-3 drop-shadow-sm">
             {appData.firstPhoto.title}
           </h2>
           <p className="text-sm text-text-secondary leading-relaxed px-6 tracking-wide font-light">

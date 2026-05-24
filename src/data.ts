@@ -21,7 +21,7 @@ export const appData = {
 
   // ======= 第一张合照 =======
   firstPhoto: {
-    title: "还记得第一张合照吗？",
+    title: "还记得我们的第一张合照吗？",
     description: "云南滇池，勇敢的你还有无措的我= =",
     image: "/第一张照片.jpg", // 也可以替换成其他你想展示的第一张照片
   },
