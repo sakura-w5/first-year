@@ -5,7 +5,7 @@ import { getImageUrl } from '../utils/image';
 
 export const FirstPhoto: React.FC = () => {
   return (
-    <div className="relative min-h-[80vh] flex flex-col items-center justify-center p-6 overflow-hidden">
+    <div className="relative min-h-[80vh] flex flex-col items-center justify-center p-4 sm:p-6 overflow-hidden">
       <div className="absolute top-10 right-[-10%] w-48 h-48 bg-pastel-mint rounded-full blur-[80px] opacity-60 pointer-events-none" />
       <div className="absolute bottom-10 left-[-10%] w-64 h-64 bg-pastel-purple rounded-full blur-[100px] opacity-40 pointer-events-none" />
 
@@ -14,7 +14,7 @@ export const FirstPhoto: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ type: "spring", stiffness: 50, damping: 20 }}
-        className="z-10 w-full max-w-sm"
+        className="z-10 w-full max-w-[320px] sm:max-w-sm shrink-0"
       >
         <div className="text-center mb-10">
           <h2 className="text-[2.25rem] font-display text-text-primary mb-3 drop-shadow-sm">

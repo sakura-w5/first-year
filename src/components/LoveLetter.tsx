@@ -4,7 +4,7 @@ import { appData } from '../data';
 
 export const LoveLetter: React.FC = () => {
   return (
-    <div className="py-24 px-6 max-w-md mx-auto relative overflow-hidden">
+    <div className="py-20 sm:py-24 px-4 sm:px-6 max-w-md mx-auto relative overflow-hidden">
       {/* Decorative floral/soft elements */}
       <div className="absolute top-0 right-10 w-32 h-32 bg-pastel-mint rounded-full blur-[60px] opacity-60" />
       <div className="absolute bottom-10 left-10 w-48 h-48 bg-pastel-pink rounded-full blur-[80px] opacity-50" />
@@ -14,7 +14,7 @@ export const LoveLetter: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ type: "spring", stiffness: 50, damping: 20 }}
-        className="bg-white/70 backdrop-blur-xl rounded-[2rem] p-10 shadow-2xl shadow-rose-200/20 border border-white"
+        className="bg-white/70 backdrop-blur-xl rounded-[2rem] p-6 sm:p-10 shadow-2xl shadow-rose-200/20 border border-white"
       >
         <h2 className="text-[2rem] font-display text-rose-400 mb-8 text-center drop-shadow-sm">
           {appData.letter.title}

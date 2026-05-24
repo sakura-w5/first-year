@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[90vh] flex flex-col items-center justify-center p-6 overflow-hidden">
+    <div className="relative min-h-[100dvh] flex flex-col items-center justify-center p-4 sm:p-6 overflow-hidden">
       {/* Decorative background blur shapes */}
       <div className="absolute top-[-5%] right-[-5%] w-[400px] h-[400px] bg-pastel-pink rounded-full blur-[100px] opacity-70 pointer-events-none" />
       <div className="absolute bottom-[-5%] left-[-5%] w-[350px] h-[350px] bg-pastel-purple rounded-full blur-[100px] opacity-50 pointer-events-none" />
@@ -37,9 +37,9 @@ export const Hero: React.FC = () => {
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 60, damping: 20, duration: 1 }}
-        className="z-10 w-full max-w-sm"
+        className="z-10 w-full max-w-[340px] sm:max-w-sm shrink-0"
       >
-        <div className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-rose-200/40 aspect-[4/5] bg-white border-4 border-white/80 group">
+        <div className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-rose-200/40 aspect-[3/4] sm:aspect-[4/5] bg-white border-4 border-white/80 group">
           <img
             src={getImageUrl(appData.hero.coverImage)}
             alt="Cover"
@@ -68,29 +68,29 @@ export const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1 }}
-        className="z-10 mt-12 text-center"
+        className="z-10 mt-8 sm:mt-12 text-center"
       >
-        <h3 className="text-[13px] text-text-secondary tracking-[0.15em] mb-5 flex items-center justify-center gap-2 font-medium">
+        <h3 className="text-[12px] sm:text-[13px] text-text-secondary tracking-[0.15em] mb-4 sm:mb-5 flex items-center justify-center gap-2 font-medium">
           我们在一起 <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400 animate-pulse" />
         </h3>
-        <div className="flex gap-4 justify-center items-end text-text-primary px-4">
-          <div className="flex flex-col items-center min-w-[3rem]">
-            <span className="text-4xl font-display text-text-primary">{timeElapsed.days}</span>
+        <div className="flex gap-2 sm:gap-4 justify-center items-end text-text-primary px-2 sm:px-4 scale-90 sm:scale-100 origin-top">
+          <div className="flex flex-col items-center min-w-[2.75rem] sm:min-w-[3rem]">
+            <span className="text-3xl sm:text-4xl font-display text-text-primary">{timeElapsed.days}</span>
             <span className="text-[10px] text-text-secondary mt-1 tracking-widest uppercase">天</span>
           </div>
           <span className="text-2xl font-light text-rose-200 pb-2">:</span>
-          <div className="flex flex-col items-center min-w-[2.5rem]">
-            <span className="text-3xl font-light">{timeElapsed.hours.toString().padStart(2, '0')}</span>
+          <div className="flex flex-col items-center min-w-[2.25rem] sm:min-w-[2.5rem]">
+            <span className="text-2xl sm:text-3xl font-light">{timeElapsed.hours.toString().padStart(2, '0')}</span>
             <span className="text-[10px] text-text-secondary mt-1 tracking-widest uppercase">时</span>
           </div>
           <span className="text-xl font-light text-rose-200 pb-2">:</span>
-          <div className="flex flex-col items-center min-w-[2.5rem]">
-            <span className="text-3xl font-light">{timeElapsed.minutes.toString().padStart(2, '0')}</span>
+          <div className="flex flex-col items-center min-w-[2.25rem] sm:min-w-[2.5rem]">
+            <span className="text-2xl sm:text-3xl font-light">{timeElapsed.minutes.toString().padStart(2, '0')}</span>
             <span className="text-[10px] text-text-secondary mt-1 tracking-widest uppercase">分</span>
           </div>
           <span className="text-xl font-light text-rose-200 pb-2">:</span>
-          <div className="flex flex-col items-center min-w-[2.5rem]">
-            <span className="text-3xl font-light">{timeElapsed.seconds.toString().padStart(2, '0')}</span>
+          <div className="flex flex-col items-center min-w-[2.25rem] sm:min-w-[2.5rem]">
+            <span className="text-2xl sm:text-3xl font-light">{timeElapsed.seconds.toString().padStart(2, '0')}</span>
             <span className="text-[10px] text-text-secondary mt-1 tracking-widest uppercase">秒</span>
           </div>
         </div>

@@ -8,13 +8,13 @@ import { AudioPlayer } from './components/AudioPlayer';
 
 export default function App() {
   return (
-    <div className="min-h-screen relative font-sans antialiased overflow-x-hidden selection:bg-rose-200 selection:text-text-primary">
+    <div className="min-h-[100dvh] relative font-sans antialiased overflow-x-hidden selection:bg-rose-200 selection:text-text-primary">
       {/* Refined ambient background using elegant pastel tones */}
       <div className="fixed inset-0 z-[-1] bg-gradient-to-br from-pastel-beige via-pastel-pink to-pastel-beige opacity-80" />
       
       <AudioPlayer />
 
-      <main className="max-w-md mx-auto w-full shadow-2xl shadow-rose-100/10 bg-white/40 backdrop-blur-md min-h-screen">
+      <main className="max-w-md mx-auto w-full shadow-2xl shadow-rose-100/10 bg-white/40 backdrop-blur-md min-h-[100dvh]">
         <Hero />
         <FirstPhoto />
         <StoryTimeline />

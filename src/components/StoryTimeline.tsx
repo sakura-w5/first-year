@@ -16,7 +16,7 @@ const getThemeColor = (theme: string) => {
 
 export const StoryTimeline: React.FC = () => {
   return (
-    <div className="py-16 px-6 max-w-md mx-auto relative">
+    <div className="py-12 sm:py-16 px-4 md:px-6 max-w-md mx-auto relative">
       <div className="text-center mb-16">
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
@@ -30,7 +30,7 @@ export const StoryTimeline: React.FC = () => {
         </motion.h2>
       </div>
 
-      <div className="relative border-l-[1.5px] border-rose-200/50 ml-4 md:ml-6 space-y-16">
+      <div className="relative border-l-[1.5px] border-rose-200/50 ml-3 sm:ml-4 md:ml-6 space-y-12 sm:space-y-16">
         {appData.timeline.map((item, index) => {
           const rawImages = (item as any).images || (item as any).image || [];
           const images = Array.isArray(rawImages) ? rawImages : [rawImages];
@@ -41,7 +41,7 @@ export const StoryTimeline: React.FC = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ type: "spring", stiffness: 50, damping: 20, delay: index * 0.1 }}
-            className="relative pl-8"
+            className="relative pl-6 sm:pl-8"
           >
             {/* Timeline dot */}
             <div className={`absolute -left-[17px] top-1 w-8 h-8 rounded-full border-4 shadow-sm flex items-center justify-center ${getThemeColor(item.theme)}`}>
@@ -70,7 +70,7 @@ export const StoryTimeline: React.FC = () => {
         )})}
       </div>
 
-      <div className="text-center mt-28 mb-16">
+      <div className="text-center mt-20 sm:mt-28 mb-12 sm:mb-16">
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export const StoryTimeline: React.FC = () => {
         </motion.h2>
       </div>
 
-      <div className="relative border-l-[1.5px] border-rose-200/50 ml-4 md:ml-6 space-y-16">
+      <div className="relative border-l-[1.5px] border-rose-200/50 ml-3 sm:ml-4 md:ml-6 space-y-12 sm:space-y-16">
         {appData.activities?.map((item, index) => {
           const rawImages = (item as any).images || (item as any).image || [];
           const images = Array.isArray(rawImages) ? rawImages : [rawImages];
@@ -93,7 +93,7 @@ export const StoryTimeline: React.FC = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ type: "spring", stiffness: 50, damping: 20, delay: index * 0.1 }}
-            className="relative pl-8"
+            className="relative pl-6 sm:pl-8"
           >
             {/* Timeline dot */}
             <div className={`absolute -left-[17px] top-1 w-8 h-8 rounded-full border-4 shadow-sm flex items-center justify-center ${getThemeColor(item.theme)}`}>
