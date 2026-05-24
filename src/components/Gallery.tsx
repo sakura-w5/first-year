@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { appData } from '../data';
 import { Image as ImageIcon } from 'lucide-react';
+import { getImageUrl } from '../utils/image';
 
 export const Gallery: React.FC = () => {
   return (
@@ -44,7 +45,7 @@ export const Gallery: React.FC = () => {
             className={`relative rounded-3xl overflow-hidden shadow-sm border border-black/5 ${randomHeight} inline-block w-full`}
           >
             <img 
-              src={url} 
+              src={getImageUrl(url)} 
               alt={`Gallery image ${index + 1}`} 
               className="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-700 ease-in-out"
               loading="lazy"

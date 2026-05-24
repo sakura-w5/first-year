@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { Heart, ChevronDown } from 'lucide-react';
 import { appData } from '../data';
+import { getImageUrl } from '../utils/image';
 
 export const Hero: React.FC = () => {
   const [timeElapsed, setTimeElapsed] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -40,7 +41,7 @@ export const Hero: React.FC = () => {
       >
         <div className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-rose-200/40 aspect-[4/5] bg-white border-4 border-white/80 group">
           <img
-            src={appData.hero.coverImage}
+            src={getImageUrl(appData.hero.coverImage)}
             alt="Cover"
             className="w-full h-full object-cover transition-transform duration-[20s] group-hover:scale-110 ease-out"
           />

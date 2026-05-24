@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { appData } from '../data';
 import { CalendarHeart } from 'lucide-react';
+import { getImageUrl } from '../utils/image';
 
 const getThemeColor = (theme: string) => {
   switch(theme) {
@@ -56,7 +57,7 @@ export const StoryTimeline: React.FC = () => {
                 {images.map((img: string, i: number) => (
                   <div key={i} className={`rounded-2xl overflow-hidden shadow-sm border border-black/5 ${images.length > 1 ? 'aspect-square' : 'aspect-[4/3]'}`}>
                     <img 
-                      src={img} 
+                      src={getImageUrl(img)} 
                       alt={`${item.title} ${i + 1}`} 
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out" 
                       loading="lazy"
@@ -109,7 +110,7 @@ export const StoryTimeline: React.FC = () => {
                   {images.map((img: string, i: number) => (
                     <div key={i} className={`rounded-2xl overflow-hidden shadow-sm border border-black/5 ${images.length > 1 ? 'aspect-square' : 'aspect-[4/3]'}`}>
                       <img 
-                        src={img} 
+                        src={getImageUrl(img)} 
                         alt={`${item.title} ${i + 1}`} 
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out" 
                         loading="lazy"

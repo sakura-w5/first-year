@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { appData } from '../data';
+import { getImageUrl } from '../utils/image';
 
 export const FirstPhoto: React.FC = () => {
   return (
@@ -31,7 +32,7 @@ export const FirstPhoto: React.FC = () => {
         >
           <div className="overflow-hidden aspect-square rounded-sm border border-black/5">
             <img
-              src={appData.firstPhoto.image}
+              src={getImageUrl(appData.firstPhoto.image)}
               alt="Our First Photo"
               className="w-full h-full object-cover filter contrast-[1.05]"
               loading="lazy"
